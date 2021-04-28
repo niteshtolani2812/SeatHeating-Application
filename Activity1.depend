@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1619143200 source:d:\codeblockcodes\heatedseatprogram\fuse.c
+	<avr/io.h>
+
+1619610689 source:d:\codeblockcodes\heatedseatprogram\main.c
+	<avr/io.h>
+	<util/delay.h>
+	<avr/interrupt.h>
+
+1619143200 source:d:\codeblockcodes\activity1\fuse.c
+	<avr/io.h>
+
