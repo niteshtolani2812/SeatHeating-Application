@@ -1,18 +1,28 @@
+
 #include <avr/io.h>
 #include<util/delay.h>
 
+void heatedseat_init(void)
+{
+    port();         //Activity 1
+    INitADC();      //Activity 2
+    InitPWM();      //Activity 3
+    InitUART();     //Activity 4
+}
+
 int main(void)
 {
-DDRB|=(1<<PB0);     //Set B0=1
-DDRD&=~(1<<PD0);    //clear bit
-PORTD|=(1<<PD0);   //Set D0=1
-PORTD|=(1<<PD1);
-    
+uint16_t temp;
+char temp_data;
+
     while(1)
     {
         if(!(PIND&(1<<PD0))&&(!(PIND&(1<<PD1))))    //if both the switches are pressed
         {
             PORTB|=(1<<PB0);
+            temp=READADC(0);
+            temp_data = OutPWM(temp);
+            UARTwrite(temp_data);
             _delay_ms(200);
 
         }
