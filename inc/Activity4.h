@@ -1,6 +1,7 @@
 #ifndef ACTIVITY4_H_INCLUDED
 #define ACTIVITY4_H_INCLUDED
 #define<avr/io.h>
+#include "Activity2.h"
 
 void InitUART(uint16_t ubrr);
 char UARTread();
