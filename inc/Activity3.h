@@ -1,6 +1,7 @@
 #ifndef ACTIVITY3_H_INCLUDED
 #define ACTIVITY3_H_INCLUDED
-#define<avr/io.h>
+#include<avr/io.h>
+#include "Activity2.h"
 
 char OutPWM(uint16_t temp_value);
 void InitPWM(void);
