@@ -3,6 +3,11 @@
 
 int main(void)
 {
+DDRB|=(1<<PB0);     //Set B0=1
+DDRD&=~(1<<PD0);    //clear bit
+PORTD|=(1<<PD0);   //Set D0=1
+PORTD|=(1<<PD1);
+    
     while(1)
     {
         if(!(PIND&(1<<PD0))&&(!(PIND&(1<<PD1))))    //if both the switches are pressed
